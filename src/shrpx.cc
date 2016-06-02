@@ -1205,7 +1205,7 @@ void fill_default_config() {
       timeoutconf.http2_read = 3_min;
 
       // Read timeout for non-HTTP2 upstream connection
-      timeoutconf.read = 1_min;
+      timeoutconf.read = 3_min;
 
       // Write timeout for HTTP2/non-HTTP2 upstream connection
       timeoutconf.write = 30_s;
@@ -1217,7 +1217,7 @@ void fill_default_config() {
     {
       auto &timeoutconf = downstreamconf.timeout;
       // Read/Write timeouts for downstream connection
-      timeoutconf.read = 1_min;
+      timeoutconf.read = 3_min;
       timeoutconf.write = 30_s;
       // Timeout for pooled (idle) connections
       timeoutconf.idle_read = 2_s;
