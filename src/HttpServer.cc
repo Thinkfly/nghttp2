@@ -89,7 +89,7 @@ void print_session_id(int64_t id) { std::cout << "[id=" << id << "] "; }
 
 Config::Config()
     : mime_types_file("/etc/mime.types"),
-      stream_read_timeout(1_min),
+      stream_read_timeout(3_min),
       stream_write_timeout(1_min),
       data_ptr(nullptr),
       padding(0),
